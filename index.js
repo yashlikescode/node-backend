@@ -3,6 +3,8 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 const Song = require("./models/song.model.js");
 const app = express();
+const cors = require("cors");
+app.use(cors()); // Enable All CORS Requests
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
